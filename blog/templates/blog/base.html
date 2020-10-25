@@ -6,10 +6,13 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>    </head>
+        <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
    </head>
     <body>
         <div class="page-header">
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-file-text"></span></a>
             <h1><a href="/">Django Blog Progra Comercial</a></h1>
         </div>
         <div class="content container">
