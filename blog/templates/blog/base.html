@@ -12,7 +12,17 @@
    </head>
     <body>
         <div class="page-header">
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-file-text"></span></a>
+            {% if user.is_authenticated %}
+                <div style="margin-bottom: 3.6%;">
+               <a href="{% url 'post_new' %}" class="top-menu"> <p class="published" style="color: white">Write New</p><span class="fa fa-file-text"></span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><p class="published" style="color: white">Publish</p><span class="fa fa-plus-square"></span> </a>
+                </div>
+                <div>
+                <h2 class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></h2>
+                </div>
+           {% else %}
+                <a href="{% url 'login' %}" class="top-menu"><span class="fa fa-sign-in"></span></a>
+            {% endif %}
             <h1><a href="/">Django Blog Progra Comercial</a></h1>
         </div>
         <div class="content container">
