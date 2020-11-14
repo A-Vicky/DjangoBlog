@@ -25,4 +25,4 @@ class PublicacionModelTest(TestCase):
     def test_fecha_creacion_label (self):
         publication = Post.objects.get(id=1)
         field_label = publication._meta.get_field('created_date').verbose_name
-        self.assertEquals(field_label,'created date')
+        self.assertEquals(field_label,'created -date')
